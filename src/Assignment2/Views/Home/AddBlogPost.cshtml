@@ -1,0 +1,54 @@
+﻿@model Assignment2.Models.BlogPost
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Add Blog";
+
+}
+<br /> <br />
+<div class="container">
+    <div class="page-header">
+        <h2 align=center>Create A New Blog</h2>
+    </div>
+    <br /> <br />
+    <div class="row">
+        <div class="col-sm-7" style="float: none; margin: 0 auto;">
+            <div class="well">
+                <form asp-controller="Home" asp-action="CreateNewBlog" method="post">
+                    <div class="form-group">
+                        <label for="Title">Title:</label>
+                        <textarea class="form-control" rows="3" id="Title" asp-for="Title" placeholder="Enter title"
+                                  maxlength="200" required="required"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="ShortDescription">Short Description:</label>
+                        <textarea class="form-control" rows="4" id="ShortDescription" asp-for="ShortDescription" placeholder="Enter description"
+                                  maxlength="400" required="required"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="Content">Content:</label>
+                        <textarea class="form-control" rows="12" maxlength="4000" placeholder="Enter content"
+                                  asp-for="Content" id="Content" required="required"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="Posted">Date:</label>
+                        <input type="date" class="form-control" id="Posted" placeholder="mm/dd/yyyy"
+                               asp-for="Posted"
+                               required="required">
+                    </div>
+                    <div class="form-group">
+                        <div class="checkbox">
+                            <label><input type="checkbox" asp-for="IsAvailable" value=true>Available</label>
+                        </div>
+                    </div>
+                    <div class="form-group text-right">
+                        <button type="submit" class="btn btn-primary btn-md">Add Blog</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<br />
+<br />

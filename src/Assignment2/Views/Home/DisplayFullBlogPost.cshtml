@@ -1,0 +1,157 @@
+﻿@using Microsoft.AspNetCore.Http;
+@using Assignment2.Models;
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Display";
+}
+
+@{
+    var getDetail = (BlogPost)ViewData["getdetail"];
+    var getUser = (User)ViewData["getuser"];
+    var getPhoto = (List<Photo>)ViewData["getphoto"];
+    var getComment = (List<CommentDetail>)ViewData["getcomment"];
+}
+<br />
+<br />
+<br />
+
+<!-- Page Content -->
+<div class="container">
+    <div class="page-header">
+        <h2>Blog</h2>
+    </div>
+    <br /><br />
+
+    <div class="row mt">
+
+        <!-- Post Content Column -->
+        <div class="col-sm-9">
+
+            <!-- Title -->
+            <h1 class="mt-4">@getDetail.Title</h1>
+
+            <!-- Author -->
+            <p class="lead">
+                by @getUser.FirstName&nbsp;@getUser.LastName
+                <br />email: <a href="#">@getUser.EmailAddress</a>
+            </p>
+
+            <hr>
+
+            <!-- Date/Time -->
+            <p>Posted on @getDetail.Posted</p>
+
+            <hr>
+            <!-- Post Content -->
+            <p>@getDetail.Content</p>
+            <hr>
+            <h4 align="center">Images that associated with this blog post: </h4>
+            @if (getPhoto.Count == 0 || getPhoto == null)
+            {
+                <p align="center">There are no files to display.</p>
+            }
+            else
+            {
+                <table>
+                    @foreach (var photo in getPhoto)
+                    {
+                        <tr>
+                            <td style="vertical-align: top">
+                                <img src="@photo.Url" style="max-width: 500px;" />
+                                <br />
+                                @photo.Filename
+                                <hr />
+                            </td>
+                        </tr>
+                    }
+                </table>
+
+            }
+            <hr>
+            <div>
+                <h3>@getComment.Count()&nbsp;Comments</h3>
+            </div>
+            <br />
+            <br />
+            @if (getComment.Count() > 0 || getComment != null)
+            {
+                foreach (var comment in getComment)
+                {
+                    <div class="well" style="background-color: hsl(0, 0%, 96%);">
+                        <div class="media">
+                            <div class="media-left media-top">
+                                <img src="~/image/img_avatar.png" class="media-object img-rounded" style="width:60px">
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading" style="font-weight:bold">@comment.firstname&nbsp;@comment.lastname</h4>
+                                <p>@comment.comment.Content</p>
+                                <p>Rating:&emsp;@comment.comment.Rating/5</p>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+            <br />
+            <br />
+            <br />
+            @if (Context.Session.GetString("FirstName") != null || Context.Session.GetString("LastName") != null)
+            {
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="well">
+                            <form asp-controller="Home" asp-action="PostComment" method="post">
+                                <input type="hidden" name="BlogPostId" value="@getDetail.BlogPostId">
+                                <div class="form-group">
+                                    <label for="Content">Add your comment:</label>
+                                    <textarea class="form-control" rows="7" maxlength="2048"
+                                              name="Content" required="required" id="Content"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="Rating">Rating</label>
+                                    <input class="form-control" type="number" name="Rating" min="0" max="5" required="required" />
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary btn-md"
+                                            style="width: 80px !important;">
+                                        Submit
+                                    </button>
+                                    &nbsp;
+                                    <button type="reset" class="btn btn-primary btn-md"
+                                            style="width: 80px !important;" value="Reset">
+                                        Cancel
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="col-sm-3" style="padding-left: 55px;">
+            <div class="well">
+                <p style="font-weight: bold;">Main Category</p>
+                <hr style="border: 1px solid #ccc;">
+                <div class="list-group" style="padding: 0;">
+                    <a href="sub-categories?topic=food" class="list-group-item">Food</a>
+                    <a href="sub-categories?topic=program" class="list-group-item">Program</a>
+                    <a href="sub-categories?topic=media" class="list-group-item">Media</a>
+                    <a href="sub-categories?topic=sport" class="list-group-item">Sport</a>
+                    <a href="sub-categories?topic=help" class="list-group-item">
+                        Ask
+                        for help
+                    </a> <a href="sub-categories?topic=activity"
+                            class="list-group-item">Activity</a> <a href="sub-categories?topic=book" class="list-group-item">Book</a>
+                    <a href="sub-categories?topic=funny" class="list-group-item">
+                        Funny
+                        spot
+                    </a> <a href="sub-categories?topic=classified"
+                            class="list-group-item">Classified</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.row -->
+
+</div>

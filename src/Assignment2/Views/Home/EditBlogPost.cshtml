@@ -1,0 +1,92 @@
+﻿@using Assignment2.Models;
+
+@model Assignment2.Models.BlogPost
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Edit Blog";
+}
+@{
+    var return_photos = (List<Photo>)ViewData["photos"];
+}
+<br /> <br />
+<div class="container">
+    <div class="page-header">
+        <h2 align=center>Edit Blog</h2>
+    </div>
+    <br /> <br />
+    <div class="row">
+        <div class="col-sm-7" style="float: none; margin: 0 auto;">
+            <div class="well">
+                <form asp-controller="Home" asp-action="UpdateBlog" method="post">
+                    <input type="hidden" value="@Model.BlogPostId" name="id" />
+                    <div class="form-group">
+                        <label for="Title">Title:</label>
+                        <textarea class="form-control" rows="3" asp-for="Title"
+                                  maxlength="200" required="required"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="ShortDescription">Short Description:</label>
+                        <textarea class="form-control" rows="4" asp-for="ShortDescription"
+                                  maxlength="400" required="required"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="Content">Content:</label>
+                        <textarea class="form-control" rows="12" maxlength="4000"
+                                  asp-for="Content" required="required"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="Posted">Date:</label>
+                        <input type="date" class="form-control"
+                               asp-for="Posted"
+                               required="required">
+                    </div>
+                    <div class="form-group">
+                        <div class="checkbox">
+                            <label><input type="checkbox" asp-for="IsAvailable">Available</label>
+                        </div>
+                    </div>
+                    <div class="form-group text-right">
+                        <button type="submit" class="btn btn-primary btn-md">Edit Blog</button>
+                    </div>
+                </form>
+            </div>
+            <hr />
+            <h2 align="center">Upload File</h2>
+            <hr />
+            <div class="well">
+                <form asp-controller="Home" asp-action="UploadFileNow" enctype="multipart/form-data">
+                    <input type="hidden" value="@Model.BlogPostId" name="id" />
+                    <div class="form-group">
+                        <input type="file" name="files" />
+                    </div>
+                    <div class="form-group text-right">
+                        <button type="submit" class="btn btn-primary btn-md">Upload Now</button>
+                    </div>
+                </form>
+            </div>
+            @if (return_photos.Count() != 0)
+            {
+                <table align="center">
+                    @foreach (var photo in return_photos)
+                    {
+                        <tr>
+                            <td style="vertical-align: top; min-width: 100px;">
+                                <a onclick="return confirm('Are you sure you wante to delete this image?');" asp-controller="Home" asp-action="DeleteFile" asp-route-id="@photo.PhotoId" asp-route-blogid="@Model.BlogPostId">Delete</a>
+                            </td>
+                            <td style="vertical-align: top">
+                                <img src="@photo.Url" style="max-width: 400px;" />
+                                <br />
+                                @photo.Filename
+                                <hr />
+                            </td>
+                        </tr>
+                    }
+                </table>
+            }
+        </div>
+    </div>
+</div>
+<br />
+<br />
+<br />

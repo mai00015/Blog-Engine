@@ -1,0 +1,76 @@
+﻿@using Microsoft.AspNetCore.Http;
+@using Assignment2.Models;
+
+@model IEnumerable<Assignment2.Models.BlogPost>
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Index";
+}
+@{
+    var getPhotos = (List<Photo>)ViewData["photo"];
+}
+@{
+    int roleId = Convert.ToInt32(Context.Session.GetInt32("RoleId"));
+}
+<br />
+<br />
+<br />
+<div class="container">
+    <div class="page-header">
+        <h2 align=center>Blog Posts</h2>
+    </div>
+    <br /><br />
+    <div class="row mt">
+        <div class="col-sm-12">
+            <div class="col-sm-12 forum-head lpad">
+                <div class="col-sm-1 child"></div>
+                <div class="col-sm-3 child">Title</div>
+                <div class="col-sm-4 child">Short Description</div>
+                <div class="col-sm-2 child">Posted</div>
+
+            </div>
+            @if (Model == null || Model.Count() == 0)
+            {
+                <div class="col-sm-12 forum-topic pad">
+                    <h4>Currently, there are no blogs to display.</h4>
+                </div>
+            }
+            else
+            {
+                foreach (var item in Model)
+                {
+                    @if (item.IsAvailable == true || roleId == 1)
+                    {
+
+                        <div class="col-sm-12 forum-topic pad">
+                            <div class="col-sm-1 child">
+                                @foreach (var photo in getPhotos)
+                                {
+                                    if (photo.BlogPostId == item.BlogPostId)
+                                    {
+                                        <img src="@photo.Url" class="media-object img-rounded" style="width:60px">
+                                        break;
+                                    }
+                                }
+                            </div>
+                            <div class="col-sm-3 child">
+                                <a asp-controller="Home" asp-action="DisplayFullBlogPost" asp-route-id="@item.BlogPostId">@item.Title</a><br />
+                            </div>
+                            <div class="col-sm-4 child">@item.ShortDescription</div>
+                            <div class="col-sm-2 child">@item.Posted</div>
+                            @if (roleId == 1 && Context.Session.GetInt32("UserId") == item.UserId)
+                            {
+                                <div class="col-sm-1 child">
+                                    <a class="btn btn-xs btn-warning" asp-controller="Home" asp-action="EditBlogPost" asp-route-id="@item.BlogPostId">Edit Blog</a>
+                                </div>
+                                <div class="col-sm-1 child">
+                                    <a class="btn btn-xs btn-danger" asp-controller="Home" asp-action="DeleteBlogPost" asp-route-id="@item.BlogPostId">Delete Blog</a>
+                                </div>
+                            }
+                        </div>
+                    }
+                }
+            }
+        </div>
+    </div>
+</div>

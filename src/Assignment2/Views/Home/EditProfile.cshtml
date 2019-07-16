@@ -1,0 +1,115 @@
+﻿@model Assignment2.Models.User
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Edit";
+}
+<br /> <br />
+<div class="container">
+    <div class="page-header">
+        <h2 align=center>Edit Account</h2>
+    </div>
+    <br /> <br />
+    <div class="row">
+        <div class="col-sm-7" style="float: none; margin: 0 auto;">
+            <div class="well">
+                <form class="form-horizontal" asp-controller="Home" asp-action="UpdateAccount" method="post">
+                    <input type="hidden" value="@Model.UserId" name="id" />
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" for="FirstName">
+                            First Name:
+                        </label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" asp-for="FirstName"
+                                   required="required">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" for="LastName">
+                            Last Name:
+                        </label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" asp-for="LastName"
+                                   required="required">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" for="EmailAddress">
+                            Email Address:
+                        </label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" asp-for="EmailAddress"
+                                   required="required">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" for="Password">
+                            Password:
+                        </label>
+                        <div class="col-sm-6">
+                            <input type="password" class="form-control" asp-for="Password" required="required">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" for="RoleId">Role:</label>
+                        <div class="col-sm-6">
+                            <label class="radio-inline">
+                                <input type="radio" asp-for="RoleId" required="required" value="1">Admin
+                            </label>&emsp;&emsp;&emsp; <label class="radio-inline">
+                                <input type="radio" asp-for="RoleId" required="required" value="2">General User
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" for="DateOfBirth">
+                            Date Of Birth:
+                        </label>
+                        <div class="col-sm-6">
+                            <input type="date" class="form-control" asp-for="DateOfBirth" required="required">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" for="City">
+                            City:
+                        </label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" asp-for="City" required="required">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" for="Address">
+                            Address:
+                        </label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" asp-for="Address" required="required">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" for="PostalCode">
+                            Postal Code:
+                        </label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" asp-for="PostalCode" required="required">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" for="Country">
+                            Country:
+                        </label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" asp-for="Country" required="required">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-4 col-sm-10">
+                            <button type="submit" class="btn btn-default">Edit Account</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<br />
+<br />
