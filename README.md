@@ -29,8 +29,8 @@ For this project, I built a blog website that contains some features for users i
 ![Add blog post](https://raw.githubusercontent.com/mai00015/Blog-Engine/master/src/Assignment2/wwwroot/image/7.JPG)  
 >The add blog post tab
 
-![Add bad words](https://raw.githubusercontent.com/mai00015/Blog-Engine/master/src/Assignment2/wwwroot/image/8.JPG)  
->The place where user adds bad words
+![View bad words](https://raw.githubusercontent.com/mai00015/Blog-Engine/master/src/Assignment2/wwwroot/image/8.JPG)  
+>List of bad words that users added
 
-![View bad words](https://raw.githubusercontent.com/mai00015/Blog-Engine/master/src/Assignment2/wwwroot/image/9.JPG)  
->List of bad words
+![View new post](https://raw.githubusercontent.com/mai00015/Blog-Engine/master/src/Assignment2/wwwroot/image/9.JPG)  
+>Users can edit or delete their own blog post
