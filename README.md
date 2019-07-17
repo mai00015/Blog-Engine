@@ -9,10 +9,10 @@ For this project, I built a blog website that contains some features for users i
 * Bad Words tab: Allows an administrator to define a set of restricted words that will be starred - out when a use posts a comment. The administrator should be able to delte bad words
 
 ![Navbar](https://raw.githubusercontent.com/mai00015/Blog-Engine/master/src/Assignment2/wwwroot/image/1.JPG)  
->The navbar
+>The main page
 
 ![Main Menu](https://raw.githubusercontent.com/mai00015/Blog-Engine/master/src/Assignment2/wwwroot/image/2.JPG)  
->The first menu when running the software 
+>The display full blog post tab
 
 ![Log in](https://raw.githubusercontent.com/mai00015/Blog-Engine/master/src/Assignment2/wwwroot/image/3.JPG)  
 >The login form
