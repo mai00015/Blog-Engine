@@ -18,19 +18,19 @@ For this project, I built a blog website that contains some features for users i
 >The comment section
 
 ![Sign up](https://raw.githubusercontent.com/mai00015/Blog-Engine/master/src/Assignment2/wwwroot/image/4.JPG)  
->The Sign up form
+>The Sign up tab
 
-![Multilanguage](https://raw.githubusercontent.com/mai00015/Blog-Engine/master/src/Assignment2/wwwroot/image/5.JPG)  
->Use Google Translation API key
+![Log in](https://raw.githubusercontent.com/mai00015/Blog-Engine/master/src/Assignment2/wwwroot/image/5.JPG)  
+>The log in tab
 
-![Main topics](https://raw.githubusercontent.com/mai00015/Blog-Engine/master/src/Assignment2/wwwroot/image/6.JPG)  
->Display main topics
+![Navbar](https://raw.githubusercontent.com/mai00015/Blog-Engine/master/src/Assignment2/wwwroot/image/6.JPG)  
+>The navbar when users logged in
 
-![Sub-topic](https://raw.githubusercontent.com/mai00015/Blog-Engine/master/src/Assignment2/wwwroot/image/7.JPG)  
->Display sub-topics
+![Add blog post]/raw.githubusercontent.com/mai00015/Blog-Engine/master/src/Assignment2/wwwroot/image/7.JPG)  
+>The add blog post tab
 
-![Rating](https://raw.githubusercontent.com/mai00015/Blog-Engine/master/src/Assignment2/wwwroot/image/8.JPG)  
->Like or dislike
+![Add bad words](https://raw.githubusercontent.com/mai00015/Blog-Engine/master/src/Assignment2/wwwroot/image/8.JPG)  
+>The place where user adds bad words
 
-![Comments](https://raw.githubusercontent.com/mai00015/Blog-Engine/master/src/Assignment2/wwwroot/image/9.JPG)  
->Display comments
+![View bad words](https://raw.githubusercontent.com/mai00015/Blog-Engine/master/src/Assignment2/wwwroot/image/9.JPG)  
+>List of bad words
