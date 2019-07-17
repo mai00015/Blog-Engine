@@ -8,7 +8,7 @@ For this project, I built a blog website that contains some features for users i
 * Edit blog post tab: It allows an administrator to modify of a selected blog post
 * Bad Words tab: Allows an administrator to define a set of restricted words that will be starred - out when a use posts a comment. The administrator should be able to delte bad words
 
-![Navbar](https://raw.githubusercontent.com/mai00015/acHangout/master/src/Assignment2/wwwroot/image/1.png)  
+![Navbar](https://raw.githubusercontent.com/mai00015/Blog-Engine/master/src/Assignment2/wwwroot/image/1.JPG)  
 >The navbar
 
 ![Main Menu](https://raw.githubusercontent.com/mai00015/acHangout/master/acHangout/database/2.png)  
