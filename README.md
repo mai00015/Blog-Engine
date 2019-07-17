@@ -11,26 +11,26 @@ For this project, I built a blog website that contains some features for users i
 ![Navbar](https://raw.githubusercontent.com/mai00015/Blog-Engine/master/src/Assignment2/wwwroot/image/1.JPG)  
 >The navbar
 
-![Main Menu](https://raw.githubusercontent.com/mai00015/acHangout/master/acHangout/database/2.png)  
+![Main Menu](https://raw.githubusercontent.com/mai00015/Blog-Engine/master/src/Assignment2/wwwroot/image/2.JPG)  
 >The first menu when running the software 
 
-![Log in](https://raw.githubusercontent.com/mai00015/acHangout/master/acHangout/database/3.png)  
+![Log in](https://raw.githubusercontent.com/mai00015/Blog-Engine/master/src/Assignment2/wwwroot/image/3.JPG)  
 >The login form
 
-![Sign up](https://raw.githubusercontent.com/mai00015/acHangout/master/acHangout/database/5.png)  
+![Sign up](https://raw.githubusercontent.com/mai00015/Blog-Engine/master/src/Assignment2/wwwroot/image/4.JPG)  
 >The Sign up form
 
-![Multilanguage](https://raw.githubusercontent.com/mai00015/acHangout/master/acHangout/database/4.png)  
+![Multilanguage](https://raw.githubusercontent.com/mai00015/Blog-Engine/master/src/Assignment2/wwwroot/image/5.JPG)  
 >Use Google Translation API key
 
-![Main topics](https://raw.githubusercontent.com/mai00015/acHangout/master/acHangout/database/6.png)  
+![Main topics](https://raw.githubusercontent.com/mai00015/Blog-Engine/master/src/Assignment2/wwwroot/image/6.JPG)  
 >Display main topics
 
-![Sub-topic](https://raw.githubusercontent.com/mai00015/acHangout/master/acHangout/database/7.png)  
+![Sub-topic](https://raw.githubusercontent.com/mai00015/Blog-Engine/master/src/Assignment2/wwwroot/image/7.JPG)  
 >Display sub-topics
 
-![Rating](https://raw.githubusercontent.com/mai00015/acHangout/master/acHangout/database/8.png)  
+![Rating](https://raw.githubusercontent.com/mai00015/Blog-Engine/master/src/Assignment2/wwwroot/image/8.JPG)  
 >Like or dislike
 
-![Comments](https://raw.githubusercontent.com/mai00015/acHangout/master/acHangout/database/9.png)  
+![Comments](https://raw.githubusercontent.com/mai00015/Blog-Engine/master/src/Assignment2/wwwroot/image/9.JPG)  
 >Display comments
