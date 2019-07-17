@@ -26,7 +26,7 @@ For this project, I built a blog website that contains some features for users i
 ![Navbar](https://raw.githubusercontent.com/mai00015/Blog-Engine/master/src/Assignment2/wwwroot/image/6.JPG)  
 >The navbar when users logged in
 
-![Add blog post]/raw.githubusercontent.com/mai00015/Blog-Engine/master/src/Assignment2/wwwroot/image/7.JPG)  
+![Add blog post](https://raw.githubusercontent.com/mai00015/Blog-Engine/master/src/Assignment2/wwwroot/image/7.JPG)  
 >The add blog post tab
 
 ![Add bad words](https://raw.githubusercontent.com/mai00015/Blog-Engine/master/src/Assignment2/wwwroot/image/8.JPG)  
