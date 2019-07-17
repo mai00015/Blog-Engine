@@ -1,14 +1,12 @@
 # Blog Engine
-For our project, we built a forum, similar to websites such as reddit, and other forum websites out there today. Some of the features are:
-* Food tab - able to view and rate various restaurants, see their location, interact with other users
-* Media tab - images, videos, 
-* Sport tab - post threads, articles on different types of sports, discuss with other users
-* Education tab - courses on an assortment of subjects such as math, science, programming are placed here, do quizzes, discuss with other users
-* Users can create New Sub-categories  
-
-This forum, like many others, will be a place of discussion and hanging out with others that have the same common interests. Users will be able to create threads in any of the four discussion tabs (food, sports, media, education), after which, other users can actively participate by posting comments relevant to that thread. 
-
-All four discussion tabs will have a broad range of topics to choose from, so whether you’re into sports or food, there’s a community out there for you. 
+For this project, I built a blog website that contains some features for users including:
+* Register tab: User can create an account that has first name, last name, email address, password and role
+* Login tab: User can log in to an account based on email address and password
+* Index tab: It lists all the Blog Posts created including title, contentas a preview. User enter the link to see the full blog post
+* Display full blog post tab: It shows the title, content, posted value, email address and full name of the users who created the post. If the user is logged in, they should be able to comment on the blog post. When a user posts a comment, it should be scanned for Bad Words listed in the Bad Words tab in database. If a word is found, replace that word content with *****
+* Add blog post tab: User can create a blog post including title, content, posted (date time)
+* Edit blog post tab: It allows an administrator to modify of a selected blog post
+* Bad Words tab: Allows an administrator to define a set of restricted words that will be starred - out when a use posts a comment. The administrator should be able to delte bad words
 
 ![Navbar](https://raw.githubusercontent.com/mai00015/acHangout/master/acHangout/database/1.png)  
 >The navbar
